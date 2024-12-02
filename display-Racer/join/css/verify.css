@@ -8,35 +8,63 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    background: #000;
-    padding: 1rem 2rem;
+.header {
     display: flex;
-    justify-content: space-between;
+    height: 70px;
     align-items: center;
+    justify-content: space-between;
+    background-color: rgb(126, 123, 123);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 100;
 }
 
-.logo {
-    font-size: 1.5rem;
-    color: #e30613;
-    text-decoration: none;
-}
-
-.nav-links {
-    list-style: none;
+.logo_container {
     display: flex;
-    gap: 1.5rem;
+    align-items: center;
+    margin-left: 10px;
 }
 
-.nav-links a {
+.logo_container a {
     text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    color: #e30613;
+.logo_container h1 {
+    color: white;
+    font-family: monospace;
+    font-size: 32px;
+    margin: 0;
+}
+
+.logo_container h1 span {
+    font-weight: 800;
+}
+
+#Race {
+    color: #9a0e0e;
+}
+
+.nav-buttons-container {
+    display: flex;
+    margin-right: 30px;
+}
+
+.nav-button-special {
+    padding-right: 0px;
+    padding-left: 0px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(126, 123, 123);
+    color: rgb(87, 18, 18);
+    text-decoration: none;
+    width: 200px;
+}
+
+.nav-button:hover,
+.nav-button-special:hover {
+    text-decoration: underline;
 }
 
 /* Verification Page */
@@ -44,6 +72,7 @@ header {
     text-align: center;
     padding: 2rem;
     position: relative;
+    margin-top: 80px;
 }
 
 .carousel-container {
