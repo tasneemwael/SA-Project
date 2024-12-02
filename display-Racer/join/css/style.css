@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.join-race-page {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #e30613;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.calendar-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.calendar-navigation button {
+    padding: 0.5rem 1rem;
+    background-color: #e30613;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.calendar-navigation button:hover {
+    background-color: #b1040f;
+}
+
+#current-month-year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.calendar div {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+}
+
+.calendar .available {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.calendar .unavailable {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.calendar .completed {
+    background-color: #e2e3e5;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+.calendar div:hover {
+    opacity: 0.8;
+}
+
+button#confirm-race-day {
+    padding: 0.5rem 1.5rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+button#confirm-race-day:hover {
+    background-color: #218838;
+}
+
+.availability-message {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

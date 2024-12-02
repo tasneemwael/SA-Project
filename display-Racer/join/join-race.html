@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Race</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main>
+        <section id="join-race" class="join-race-page">
+            <h1>Join the Race</h1>
+            <p>Select a day to join the race:</p>
+
+            <div class="calendar-navigation">
+                <button id="prev-month">&lt;</button>
+                <span id="current-month-year"></span>
+                <button id="next-month">&gt;</button>
+            </div>
+
+            <div id="calendar" class="calendar"></div>
+            <button id="confirm-race-day" style="display:none;">Confirm Race Day</button>
+            <div id="availability-message" class="availability-message"></div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
