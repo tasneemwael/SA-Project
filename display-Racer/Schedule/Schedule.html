@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Race Schedule</title>
   <link rel="stylesheet" href="Schedule.css">
 </head>
+
 <body>
 
   <header>
@@ -21,7 +23,7 @@
             Pages
           </button>
         </a>
-        <a href="../JoinRace/Join-Race.html">
+        <a href="../Join/Join-Race.html">
           <button class="nav-button-special">
             Join Race
           </button>
@@ -42,7 +44,7 @@
 
   <div class="container">
     <h1>Race Schedule</h1>
-    
+
     <div class="schedule">
       <!-- Race 1 -->
       <div class="race-card" data-date="2024-11-30">
@@ -135,7 +137,7 @@
         }
 
         // Adding click event for the "Enroll Now" button
-        enrollButton.addEventListener("click", function() {
+        enrollButton.addEventListener("click", function () {
           const raceName = this.closest(".race-card").querySelector(".details p").textContent.split(":")[1].trim();
           openModal(raceName);
         });
@@ -160,4 +162,5 @@
     }
   </script>
 </body>
+
 </html>
