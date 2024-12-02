@@ -1,0 +1,205 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('pic-1.jpg');  
+  background-color: #e2e2e2;  
+  background-size: cover;  
+  background-position: center;  
+  background-attachment: fixed;  
+  color: #333;  
+  margin: 0;
+  padding: 0;
+}
+
+.header{
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(126, 123, 123);
+  position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 100;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.logo_container a{
+  text-decoration: none;
+}
+
+.logo_container h1 {
+  color: white;
+  font-family: monospace;
+  font-size: 32px;
+  margin: 0;
+}
+
+.logo_container h1 span {
+  font-weight: 800;
+}
+
+#Race {
+  color: #9a0e0e;
+}
+
+.nav-buttons-container{
+  display: flex;
+  margin-right: 30px;
+}
+
+.nav-button-special{
+  padding-right: 0px;
+  padding-left: 0px;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(126, 123, 123);
+  color: rgb(87, 18, 18);
+  text-decoration: none;
+  width: 200px;
+}
+
+.nav-button:hover,
+.nav-button-special:hover{
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+h1 {
+  color: #e63946; 
+  margin-bottom: 20px;
+}
+
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.race-card {
+  background-color: #fff;  
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #333; 
+}
+
+.details {
+  text-align: left;
+}
+
+.details p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.status {
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.status.open {
+  color: #fff;
+  background-color: #28a745;  
+}
+
+.status.closed {
+  color: #fff;
+  background-color: #dc3545;  
+}
+
+
+.enroll-btn {
+  background-color: #e63946;  
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enroll-btn:disabled {
+  background-color: #888;  
+  cursor: not-allowed;
+}
+
+.enroll-btn:hover:not(:disabled) {
+  background-color: #c1292e;  
+}
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-btn {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-btn:hover {
+    background-color: #c1292e; 
+}

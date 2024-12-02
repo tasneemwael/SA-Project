@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Race Schedule</title>
+  <link rel="stylesheet" href="Schedule.css">
+</head>
+<body>
+
+  <header>
+    <div class="header">
+      <div class="logo_container">
+        <a href="../../index.html">
+          <h1>Speed<span id="Race">Chasers</span></h1>
+        </a>
+      </div>
+      <div class="nav-buttons-container">
+        <a href="..//Display-Racer.html">
+          <button class="nav-button-special">
+            Pages
+          </button>
+        </a>
+        <a href="../JoinRace/Join-Race.html">
+          <button class="nav-button-special">
+            Join Race
+          </button>
+        </a>
+        <a href="..//Results/viewresults.html">
+          <button class="nav-button-special">
+            View Results
+          </button>
+        </a href="Schedule.html">
+        <a href="Schedule.html">
+          <button class="nav-button-special">
+            Schedule
+          </button>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Race Schedule</h1>
+    
+    <div class="schedule">
+      <!-- Race 1 -->
+      <div class="race-card" data-date="2024-11-30">
+        <div class="details">
+          <p><strong>Race Name:</strong> City Marathon</p>
+          <p><strong>Date:</strong> November 29, 2024</p>
+          <p><strong>Start / End Time:</strong> 8:00 AM - 12:00 PM</p>
+          <p><strong>Address:</strong> Central Park, NY</p>
+          <p><strong>Status:</strong> <span class="status open">Open</span></p>
+        </div>
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+
+      <!-- Race 2 -->
+      <div class="race-card" data-date="2024-12-27">
+        <div class="details">
+          <p><strong>Race Name:</strong> Mountain Challenge</p>
+          <p><strong>Date:</strong> November 27, 2024</p>
+          <p><strong>Start / End Time:</strong> 6:00 AM - 10:00 AM</p>
+          <p><strong>Address:</strong> Rocky Trails, CO</p>
+          <p><strong>Status:</strong> <span class="status open">Open</span></p>
+        </div>
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+
+      <!-- Race 3 -->
+      <div class="race-card" data-date="2024-12-21">
+        <div class="details">
+          <p><strong>Race Name:</strong> Beach Sprint</p>
+          <p><strong>Date:</strong> December 21, 2024</p>
+          <p><strong>Start / End Time:</strong> 7:00 AM - 9:00 AM</p>
+          <p><strong>Address:</strong> Golden Beach, FL</p>
+          <p><strong>Status:</strong> <span class="status open">Open</span></p>
+        </div>
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+
+      <!-- Race 4 -->
+      <div class="race-card" data-date="2024-12-01">
+        <div class="details">
+          <p><strong>Race Name:</strong> Desert Dash</p>
+          <p><strong>Date:</strong> December 1, 2024</p>
+          <p><strong>Start / End Time:</strong> 5:00 AM - 9:00 AM</p>
+          <p><strong>Address:</strong> Sahara Desert, Morocco</p>
+          <p><strong>Status:</strong> <span class="status open">Open</span></p>
+        </div>
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+
+      <!-- Race 5 -->
+      <div class="race-card" data-date="2024-12-03">
+        <div class="details">
+          <p><strong>Race Name:</strong> Forest Run</p>
+          <p><strong>Date:</strong> December 3, 2024</p>
+          <p><strong>Start / End Time:</strong> 6:30 AM - 11:00 AM</p>
+          <p><strong>Address:</strong> Redwood Forest, CA</p>
+          <p><strong>Status:</strong> <span class="status open">Open</span></p>
+        </div>
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p id="modalMessage"></p> <!-- This is where the dynamic message will go -->
+      <button class="modal-btn" onclick="confirmEnrollment()">Yes, Enroll</button>
+      <button class="modal-btn" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const raceCards = document.querySelectorAll(".race-card");
+      const today = new Date();
+
+      raceCards.forEach((card) => {
+        const raceDate = new Date(card.getAttribute("data-date"));
+        const enrollButton = card.querySelector(".enroll-btn");
+        const status = card.querySelector(".status");
+
+        if (raceDate < today) {
+          enrollButton.disabled = true;
+          enrollButton.textContent = "Race Closed";
+          status.textContent = "Closed";
+          status.classList.remove("open");
+          status.classList.add("closed");
+        }
+
+        // Adding click event for the "Enroll Now" button
+        enrollButton.addEventListener("click", function() {
+          const raceName = this.closest(".race-card").querySelector(".details p").textContent.split(":")[1].trim();
+          openModal(raceName);
+        });
+      });
+    });
+
+    // Open the modal
+    function openModal(raceName) {
+      document.getElementById("myModal").style.display = "block";
+      document.getElementById("modalMessage").textContent = `Are you sure you want to enroll in ${raceName}?`;
+    }
+
+    // Close the modal
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    // Confirm enrollment and show success alert
+    function confirmEnrollment() {
+      alert("You have successfully enrolled in the race!");
+      closeModal();
+    }
+  </script>
+</body>
+</html>

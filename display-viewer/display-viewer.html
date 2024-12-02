@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+  <title>display Viewer content</title>
+  <link rel="stylesheet" href="display.css">
+</head>
+<body>
+
+  <header>
+    <div class="header">
+      <div class="logo_container">
+        <a href="../index.html">
+          <h1>Speed<span id="Race">Chasers</span></h1>
+        </a>
+      </div>
+      <div class="nav-buttons-container">
+        <a href="display-viewer.html">
+          <button class="nav-button-special">
+            Pages
+          </button>
+        <a href="view-race/view.html">
+          <button class="nav-button-special">
+            Veiw Race
+          </button>
+        </a>
+        <a href="Results/viewresults.html">
+          <button class="nav-button-special">
+            View Results
+          </button>
+        </a href="Schedule.html">
+        <a href="Schedule/Schedule.html">
+          <button class="nav-button-special">
+            Schedule
+          </button>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <p class="title">Viewer View</p>
+  <div class="games">
+
+    <a href="Results/viewresults.html" class="button-game">
+      <img class="image-game" src="images/Results.jpg">
+      <p class="game-name">
+        View Results
+      </p>
+    </a>
+
+    <a href="Schedule/Schedule.html" class="button-game">
+      <img class="image-game" src="images/Schedule.jpg">
+      <p class="game-name">
+        Races Schedule
+      </p>
+    </a>
+    
+    <a href="view-race/view.html" class="button-game">
+      <img class="image-game" src="images/viewRace.jpg">
+      <p class="game-name">
+        View Race
+      </p>
+    </a>
+
+  </div>
+
+  <script>
+    let Racer = false;
+    let viewre = false;
+    function displayRacer(){
+      Racer = true;
+    }
+  </script>
+</body>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Quicksand:wght@300..700&family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css files/main.css">
+    <link rel="stylesheet" type="text/css" href="css files/nav-footer.css">
+
+
+    <title>SpeedChasers</title>
+</head>
+<body>
+ <!------------------------------------------------------Header------------------------------------------------------>
+ <header>
+    <nav class="navbar">
+      <div class="logo_container">
+        <h1>Speed<span id="Race">Chasers</span></h1>
+      </div>
+  
+      <div class="page-total">
+        <ul class="ul-page-total">
+          <li><a id="Home" href="index.html">Home</a></li>
+          <li><a id="About-us" href="#content1">About us</a></li>
+          <li><a id="Racer" href="#" onclick="showForm('racer')">Racer</a></li>
+          <li><a id="Viewer" href="#" onclick="showForm('viewer')">Viewer</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+<!----------------------------------------------Content------------------------------------------------------>
+
+<div class="background">
+    <div class="overlay">
+        <div class="here">
+            <div class="content">
+                <p>R A C E E X P E R I E N C E</p>
+                <h2>THE ULTIMATE RACE AWAITS</h2>
+                <h2>FEEL THE SPEED</h2>
+                
+                <button id="scrollToContent1" class="read-more">Join the Action</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="white-section" id="content1">
+    <div class="content1">
+        <div class="text-section">
+            <p>ABOUT THE RACE</p>
+            <h2>Experience the Rush of Speed</h2>
+            <h4>Get ready for an adrenaline-packed journey like never before. Our races offer not just speed but an unmatched atmosphere of excitement, passion, and intensity. Whether you’re a racer or a spectator, the thrill of the track will leave you speechless. Feel the engines roar, the tires screech, and the heart-pounding action as you immerse yourself in the world of racing.<br><br>Experience the rush from the front row, engage with the racers, and cheer for your favorites as they race against time in one of the most competitive and high-energy events in the world. Join us for an unforgettable experience where speed, precision, and skill come together.</h4>
+            <h5>Your race adventure starts here</h5>
+        </div>
+        <div class="video-section">
+            <video src="images/Racing around the world.mp4" controls></video>
+        </div>
+    </div>
+</section>
+<div class="wrapper">
+    <div class="title">
+      <h1>Our Services for Race Enthusiasts</h1>
+      <p>We are committed to providing everything you need for an unforgettable racing experience!</p>
+    </div>
+    
+    <div class="vision-mission-award-section">
+      
+      <div class="vision-card">
+        <div class="icon">
+          <i class="fas fa-eye"></i> 
+        </div>
+        <h2>Our Vision</h2>
+        <p>We aim to be the ultimate destination for race fans, offering thrilling and high-octane experiences that bring racers and fans together. Our vision is to revolutionize the world of racing, making it accessible, engaging, and adrenaline-fueled for all.</p>
+      </div>
+      
+      <div class="mission-card">
+        <div class="icon">
+        <i class="fas fa-bullseye"></i> 
+        </div>
+        <h2>Our Mission</h2>
+        <p>Our mission is to host world-class races, cultivate top-tier talent, and provide exceptional support for both participants and spectators. We are committed to pushing the limits of racing and offering unmatched experiences that challenge every racer to perform at their best.</p>
+      </div>
+      
+      <div class="award-card">
+        <div class="icon">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <h2>Award-Winning Events</h2>
+        <p>Our racing events have been recognized with numerous accolades for innovation, excellence, and impact. From local competitions to international championships, we continue to set new standards in the racing industry, creating memorable experiences that are celebrated worldwide.</p>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="section-margin-top" id="choose-destination">
+    <div class="row">
+      <h2 class="title-section">Choose Your Role</h2>
+    </div>
+    <div class="row reveal">
+
+        <div class="Box" onclick="showForm('viewer')">
+        <div class="home-box-2">
+            <img src="images/viewer.jpg" alt="Viewer" class="img-responsive">
+            <h3>Viewer</h3>
+          <div class="home-box-container">
+            <span class="home-box-2-description">Explore the race as a fan.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="Box" onclick="showForm('racer')">
+        <div class="home-box-2">
+            <img src="images/racer.jpg" alt="Racer" class="img-responsive">
+            <h3>Racer</h3>
+          <div class="home-box-container">
+            <span class="home-box-2-description">Compete on the track.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="form-modal" class="form-modal">
+    <div class="form-container">
+      <span class="close-btn" onclick="closeForm()">&times;</span>
+      <h3 id="form-title">Join as a Viewer</h3>
+      <form id="user-form" onsubmit="redirectToPage(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+        
+        <button type="submit" class="custom-btn">Submit</button>
+    </form>
+    </div>
+  </div>
+  
+        <section class="table-section">
+            <div class="table-wrapper">
+                <h2>Exclusive Features of Our Race Events</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Race Track Experience</td>
+                                <td>Get up close to the action with a chance to explore our world-class racetrack, designed for high-speed excitement and precision racing.</td>
+                            </tr>
+                            <tr>
+                                <td>VIP Viewing Areas</td>
+                                <td>Enjoy the best views of the race with our VIP packages, offering exclusive seating areas with panoramic views and premium amenities.</td>
+                            </tr>
+                            <tr>
+                                <td>Test Your Speed</td>
+                                <td>Take the wheel and feel the adrenaline rush in our speed test zones, where you can experience the thrill of racing on a professional track.</td>
+                            </tr>
+                            <tr>
+                                <td>Exclusive Race Events</td>
+                                <td>Be part of our thrilling race events with special challenges and competitions, featuring top drivers and iconic vehicles from around the world.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+  
+     
+        
+    </div>
+
+    <!---------------------------------------------------Footer--------------------------------------------------------->
+    <footer>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <div class="footer-col" id="footer-col-1">
+                        <h4>ABOUT US</h4>
+                        <hr class="footer-line-col">
+                        <p>We are passionate about creating unique experiences and offering exceptional services. Our team is dedicated to delivering top-quality content and exciting adventures.</p>
+                    </div>
+                    <div class="footer-col" id="footer-col-2">
+                        <h4>SUPPORT</h4>
+                        <hr class="footer-line-col">
+                        <p>If you need assistance, our dedicated support team is here to help you with any questions or issues. Feel free to reach out to us anytime.</p>
+                    </div>
+                    <div class="footer-col" id="footer-col-3">
+                        <h4>FOLLOW US</h4>
+                        <hr class="footer-line-col">
+                        <p>Stay connected with us on social media for the latest updates, news, and exclusive content. Join our community and never miss out!</p>
+                    </div>
+                </div>
+    
+                <div class="footer-col" id="footer-col-4">
+                    <h4 id="footer-media-title">Our Social media</h4>
+                    <hr class="footer-line-col" id="footer-line-col-media">
+                    <div class="social-links">
+                        <a href="#" class="fa fa-facebook" aria-label="Facebook"></a>
+                        <a href="#" class="fa fa-twitter" aria-label="Twitter"></a>
+                        <a href="#" class="fa fa-instagram" aria-label="Instagram"></a>
+                        <a href="#" class="fa fa-linkedin" aria-label="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js file/home.js"></script>
+
+</body>
+</html>
+

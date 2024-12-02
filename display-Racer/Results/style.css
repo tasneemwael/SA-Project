@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.header{
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(126, 123, 123);
+  position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 100;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.logo_container a{
+  text-decoration: none;
+}
+
+.logo_container h1 {
+  color: white;
+  font-family: monospace;
+  font-size: 32px;
+  margin: 0;
+}
+
+.logo_container h1 span {
+  font-weight: 800;
+}
+
+#Race {
+  color: #9a0e0e;
+}
+
+.nav-buttons-container{
+  display: flex;
+  margin-right: 30px;
+}
+
+.nav-button-special{
+  padding-right: 0px;
+  padding-left: 0px;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(126, 123, 123);
+  color: rgb(87, 18, 18);
+  text-decoration: none;
+  width: 200px;
+}
+
+.nav-button:hover,
+.nav-button-special:hover{
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.results {
+  text-align: center;
+}
+
+.results h1 {
+  font-size: 36px;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.results table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.results th,
+.results td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.results th {
+  background-color: #ff0000;
+  color: white;
+}
+
+.results tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.results tr:hover {
+  background-color: #ddd;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}

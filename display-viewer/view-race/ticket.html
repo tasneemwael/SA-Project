@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarah Mohamed</title>
+   <!-- bootstrabp -->
+   <link rel="stylesheet" href="bootstrap.min.css">
+     <!-- Font Awesome Library -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  
+  <!-- Main Template CSS File -->
+  <link rel="stylesheet" href="css/ticket.css" />
+  
+ 
+  <!-- Render All Elements Normally -->
+  <link rel="stylesheet" href="css/normalize.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Quicksand:wght@300..700&family=Style+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <div class="logo_container">
+                <a href="../../index.html">
+                  <h1>Speed<span id="Race">Chasers</span></h1>
+                </a>
+            </div>
+          <div class="nav-buttons-container">
+            <a href="../display-viewer.html">
+              <button class="nav-button-special">
+                Pages
+              </button>
+            </a>
+            <a href="view.html">
+              <button class="nav-button-special">
+                Veiw Race
+              </button>
+            </a>
+            <a href="..//Results/viewresults.html">
+              <button class="nav-button-special">
+                View Results
+              </button>
+            </a href="Schedule.html">
+            <a href="../Schedule/Schedule.html">
+              <button class="nav-button-special">
+                Schedule
+              </button>
+            </a>
+          </div>
+        </div>
+      </header>
+
+    <section class="event-details">
+        <div class="container">
+            <h1>105 Motor Speedway</h1>
+            <p class="location">Cleveland, TX</p>
+            <p class="event-name">105 Motor Speedway 2024 Awards Banquet (12/1/2024)</p>
+        </div>
+    </section>
+    <section class="ticket-options">
+        <div class="container">
+            <h2>Ticket Options</h2>
+            <form class="ticket-form" id="ticketForm">
+                <!-- Viewer ID input field -->
+                <div class="form-group">
+                    <label for="viewerId">Viewer ID:</label>
+                    <input type="text" id="viewerId" name="viewerId" placeholder="Enter your Viewer ID" required>
+                </div>
+    
+                <!-- Ticket Type Selection (Live Stream or Stadium) -->
+                <div class="ticket-selection">
+                    <label for="ticket-type">Select Ticket Type:</label>
+                    <div class="ticket-radio-buttons">
+                        <label>
+                            <input type="radio" id="live-stream" name="ticket-type" value="live-stream" required>
+                            Live Stream
+                        </label>
+                        <label>
+                            <input type="radio" id="stadium" name="ticket-type" value="stadium" required>
+                            Stadium
+                        </label>
+                    </div>
+                </div>
+    
+                <!-- VIP and Parking Checkboxes -->
+                <div class="form-group">
+                    <label>Additional Services:</label>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="vipOption" name="vipOption">
+                            Become a VIP
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="parkingOption" name="parkingOption">
+                            Reserve Parking
+                        </label>
+                    </div>
+                </div>
+    
+                <!-- Ticket Items for Adult General Admission -->
+                <div class="ticket-item">
+                    <div class="ticket-type">
+                        <h3>Adult General Admission</h3>
+                        <p class="availability available">Available</p>
+                    </div>
+                    <div class="ticket-info">
+                        <span class="price">$25.00</span>
+                        <label for="adult-qty">Qty:</label>
+                        <select id="adult-qty" name="adult-qty" required>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <!-- Payment Method Selection -->
+                <div class="form-group">
+                    <label for="payment-method">Select Payment Method:</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="cash">Cash</option>
+                    </select>
+                </div>
+    
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+    
+    <section class="support">
+        <div class="container">
+            <h2>Contact Support</h2>
+            <p>All ticket questions should be directed to the ticket seller.</p>
+            <button class="btn contact-btn">Contact Seller</button>
+        </div>
+    </section>
+    <!---------------------------------------------------Footer--------------------------------------------------------->
+    <footer>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <div class="footer-col" id="footer-col-1">
+                        <h4>ABOUT US</h4>
+                        <hr class="footer-line-col">
+                        <p>We are passionate about creating unique experiences and offering exceptional services. Our team is dedicated to delivering top-quality content and exciting adventures.</p>
+                    </div>
+                    <div class="footer-col" id="footer-col-2">
+                        <h4>SUPPORT</h4>
+                        <hr class="footer-line-col">
+                        <p>If you need assistance, our dedicated support team is here to help you with any questions or issues. Feel free to reach out to us anytime.</p>
+                    </div>
+                    <div class="footer-col" id="footer-col-3">
+                        <h4>FOLLOW US</h4>
+                        <hr class="footer-line-col">
+                        <p>Stay connected with us on social media for the latest updates, news, and exclusive content. Join our community and never miss out!</p>
+                    </div>
+                </div>
+    
+                <div class="footer-col" id="footer-col-4">
+                    <h4 id="footer-media-title">Our Social media</h4>
+                    <hr class="footer-line-col" id="footer-line-col-media">
+                    <div class="social-links">
+                        <a href="#" class="fa fa-facebook" aria-label="Facebook"></a>
+                        <a href="#" class="fa fa-twitter" aria-label="Twitter"></a>
+                        <a href="#" class="fa fa-instagram" aria-label="Instagram"></a>
+                        <a href="#" class="fa fa-linkedin" aria-label="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+  <script src="ticket.js"></script>
+</body>
+</html>
