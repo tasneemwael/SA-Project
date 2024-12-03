@@ -1,7 +1,6 @@
 // Select elements
-let currentDate = new Date(); // Start with the current date
+let currentDate = new Date();
 
-// Sample data: race availability status
 const raceDays = {
     "2024-12-10": "available",
     "2024-12-11": "unavailable",
@@ -9,7 +8,7 @@ const raceDays = {
     "2024-12-13": "available",
 };
 
-// Generate the calendar for the selected month and year
+
 function generateCalendar(date = new Date()) {
     const calendarContainer = document.getElementById("calendar");
     calendarContainer.innerHTML = "";
